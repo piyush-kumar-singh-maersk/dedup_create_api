@@ -29,6 +29,8 @@ def write_csv_data(df_smds_data):
     df_smds_data.to_csv('smds_data.csv', index=False)
 #############################################################
 
+df_smds_data, df_unloc_data = read_db()
+
 #############################################################
 # MODEL
 class City(BaseModel):
@@ -533,6 +535,4 @@ def read_root(city_input : City):
 ## NO DUPLICATE FOUND ##
 #############################################################
 
-if __name__ == "__main__":
-    df_smds_data, df_unloc_data = read_db()
-    #uvicorn.run(app, host="127.0.0.1", port=8000)
+#uvicorn.run(app, host="127.0.0.1", port=8000)
