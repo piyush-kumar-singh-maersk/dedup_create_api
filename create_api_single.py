@@ -9,7 +9,6 @@ import json
 from fastapi.responses import JSONResponse
 from fastapi import Request
 import uvicorn
-import httpx
 import requests
 import csv
 app = FastAPI()
